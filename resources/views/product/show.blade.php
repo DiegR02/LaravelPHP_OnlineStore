@@ -24,7 +24,7 @@
               </div>
             </div>
             <div class="col-auto">
-              <button class="btn bg-primary text-white" type="submit">Add to cart</button>
+              <button class="btn btn-outline-success" type="submit">Add to cart</button>
             </div>
           </div>
         </form>

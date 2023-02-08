@@ -25,6 +25,7 @@
           <a class="nav-link active" href="{{ route('product.index') }}"><i class="bi bi-book"> Products</i></a>
           <a class="nav-link active" href="{{ route('cart.index') }}"><i class="bi bi-cart4"> Cart</i></a>
           <a class="nav-link active" href="{{ route('home.about') }}"><i class="bi bi-justify-left"> About</i></a>
+          
           <div class="vr bg-white mx-2 d-none d-lg-block"></div>
           @guest
           <a class="nav-link active" href="{{ route('login') }}">Login</a>

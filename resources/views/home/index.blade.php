@@ -5,7 +5,7 @@
 <!-- Popup -->
 <div id="myModal" class="modal">
   <div class="modal-content">
-    <p style="text-align:center">The online store uses cookies to provide you with a personalized experience. For more information, please read our <a href="#">privacy policy</a></p>
+    <p style="text-align:center">This online store uses cookies to provide you with a personalized experience. For more information, please read our <a href="{{ route('home.privacy') }}">privacy policy</a></p>
     <div style="text-align:center">
       <button class="close-button">Aceptar</button>
     </div>
@@ -13,21 +13,20 @@
 </div>
 
 <script>
+  //Cookie comprobation
   window.onload = function() {
-    modal.style.display = "block";
+    if (document.cookie.replace(/(?:(?:^|.*;\s*)privacy_policy_accepted\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+      modal.style.display = "block";
+    }
   }
 
   var modal = document.getElementById("myModal");
   var closeButton = document.querySelector('.close-button');
-
+  
+  //Cookie Accept
   closeButton.onclick = function() {
+    document.cookie = "privacy_policy_accepted=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
   }
 </script>
 

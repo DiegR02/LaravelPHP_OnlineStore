@@ -18,7 +18,7 @@ html {
 
 }
 
-.bg-primary {
+.masthead {
   height:80px; /*La altura dependerá de lo que requieras*/
     background: rgb(189, 189, 189); /*Usamos un background por defecto*/
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,143,38,1) 0%, rgba(150,126,197,1) 48%, rgba(0,255,222,1) 100%);
@@ -98,7 +98,7 @@ nav{
 }
 
 .close-button {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -107,6 +107,7 @@ nav{
   display: inline-block;
   font-size: 16px;
 }
+
 
 
 
