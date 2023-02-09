@@ -16,6 +16,15 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Product::factory()->count(30)->create(); 
+        $products = [
+            ['name' => 'Product 1', 'description' => 'Description of product 1', 'price' => 10.00, 'image' => 'image1.png'],
+            ['name' => 'Product 2', 'description' => 'Description of product 2', 'price' => 20.00, 'image' => 'image2.png'],
+            ['name' => 'Product 3', 'description' => 'Description of product 3', 'price' => 30.00, 'image' => 'image3.png'],
+            
+        ];
+    
+        foreach ($products as $product) {
+            Product::create($product);
+        }
     }
 }

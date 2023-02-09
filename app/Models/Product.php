@@ -17,6 +17,10 @@ class Product extends Model
      * $this->attributes['created_at'] - timestamp - contains the product creation date
      * $this->attributes['updated_at'] - timestamp - contains the product update date
      */
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 
     public static function validate($request)
     {

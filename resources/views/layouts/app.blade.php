@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
   <link href="{{ asset('/css/app.css') }}" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -24,7 +26,7 @@
           <a class="nav-link active" href="{{ route('home.index') }}"><i class="bi bi-house"> House</i></a>
           <a class="nav-link active" href="{{ route('product.index') }}"><i class="bi bi-book"> Products</i></a>
           <a class="nav-link active" href="{{ route('cart.index') }}"><i class="bi bi-cart4"> Cart</i></a>
-          <a class="nav-link active" href="{{ route('home.about') }}"><i class="bi bi-justify-left"> About</i></a>
+          <a class="nav-link active" href="{{ route('home.about') }}"><i class="bi bi-justify-left"> About</i></a>  
           
           <div class="vr bg-white mx-2 d-none d-lg-block"></div>
           @guest
@@ -38,6 +40,8 @@
             @csrf
           </form>
           @endguest
+
+          
         </div>
       </div>
     </div>
@@ -69,7 +73,8 @@
     </div>
   </div>
   <!-- footer -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
