@@ -37,6 +37,11 @@ Route::middleware('admin')->group(function () {
     Route::delete('/admin/products/{id}/delete', 'App\Http\Controllers\Admin\AdminProductController@delete')->name("admin.product.delete");
     Route::get('/admin/products/{id}/edit', 'App\Http\Controllers\Admin\AdminProductController@edit')->name("admin.product.edit");
     Route::put('/admin/products/{id}/update', 'App\Http\Controllers\Admin\AdminProductController@update')->name("admin.product.update");
+    Route::get('/admin/comments', 'App\Http\Controllers\Admin\AdminCommentController@index')->name("admin.comment.index");
+    Route::delete('/admin/comments/{id}/delete', 'App\Http\Controllers\Admin\AdminCommentController@delete')->name("admin.comment.delete");
+    Route::get('/admin/comments/{id}/edit', 'App\Http\Controllers\Admin\AdminCommentController@edit')->name("admin.comment.edit");
+    Route::put('/admin/comments/{id}/update', 'App\Http\Controllers\Admin\AdminCommentController@update')->name("admin.comment.update");
+
 });
 
 Auth::routes();
