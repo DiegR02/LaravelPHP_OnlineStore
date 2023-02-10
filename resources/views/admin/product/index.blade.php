@@ -16,8 +16,6 @@
 
     <form method="POST" action="{{ route('admin.product.store') }}" enctype="multipart/form-data">
       @csrf
-      <!-- PUT 
-      @method('PUT')-->
       <div class="row">
         <div class="col">
           <div class="mb-3 row">
