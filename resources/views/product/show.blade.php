@@ -33,6 +33,7 @@
     </div>
   </div>
 </div>
+
 <!-- Coment section -->
 <div class="card mb-3">
   <div class="card-header">Leave a Comment</div>
@@ -50,18 +51,23 @@
   </div>
 </div>
 
-<div class="comments">
-    <h3>Comments</h3>
-    @if(count($viewData['product']->comments) > 0)
-        @foreach($viewData['product']->comments as $comment)
-            <div class="comment">
-                <p>{{ $comment->content }}</p>
-                <p>Commented by: {{ $comment->user->name }}</p>
-            </div>
-        @endforeach
-    @else
-        <p>There are no comments in this product.</p>
-    @endif
+<h3 class="text-center mb-5">Comments</h3>
+  <div class="row">
+    <div class="col-12">
+      @if(count($viewData['product']->comments) > 0)
+      @foreach($viewData['product']->comments as $comment)
+      <div class="media my-4">
+        <div class="media-body">
+          <p class="font-weight-bold mb-1">{{ $comment->content }}</p>
+          <p class="text-secondary">Commented by: {{ $comment->user->name }}</p>
+        </div>
+      </div>
+      @endforeach
+      @else
+      <p class="text-center">There are no comments in this product.</p>
+      @endif
+    </div>
+  </div>
 </div>
 
 @endsection
