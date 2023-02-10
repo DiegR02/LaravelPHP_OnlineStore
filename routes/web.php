@@ -19,8 +19,7 @@ Route::get('/about', 'App\Http\Controllers\HomeController@about')->name("home.ab
 Route::get('/privacy', 'App\Http\Controllers\HomeController@privacy')->name("home.privacy");
 Route::get('/products', 'App\Http\Controllers\ProductController@index')->name("product.index");
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')->name("product.show");
-Route::post('product/{id}/comment', 'App\Http\Controllers\ProductController@store')->name('product.store');
-
+Route::post('product/{id}/comment', 'App\Http\Controllers\CommentController@store')->name('comment.store');
 
 Route::get('/cart', 'App\Http\Controllers\CartController@index')->name("cart.index");
 Route::get('/cart/delete', 'App\Http\Controllers\CartController@delete')->name("cart.delete");

@@ -37,13 +37,15 @@
 <div class="card mb-3">
   <div class="card-header">Leave a Comment</div>
   <div class="card-body">
-    <form method="POST" action="{{ route('product.store', ['id' => $viewData['product']->getId()]) }}">
+    <form method="POST" action="{{ route('comment.store', ['id' => $viewData['product']->getId()]) }}">
       @csrf
       <div class="form-group">
         <textarea class="form-control" name="content" rows="3"></textarea>
       </div>
       <br>
+      <input type="hidden" value="{{$viewData['product']->getId()}}" name="product_id">
       <button type="submit" class="btn btn-outline-success">Submit</button>
+
     </form>
   </div>
 </div>

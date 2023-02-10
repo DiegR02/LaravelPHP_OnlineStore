@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use App\Comment;
+use App\Models\Comment;
 
 use Illuminate\Http\Request;
 
@@ -26,7 +26,8 @@ class ProductController extends Controller
         $viewData["title"] = $product["name"]." - Online Store";
         $viewData["subtitle"] =  $product["name"]." - Product information";
         $viewData["product"] = $product;
-        $viewData["comments"] = $product->comments;
+        //produc id = $id 
+        $viewData["comments"] = Comment::where('product_id', $id)->get();
         return view('product.show')->with("viewData", $viewData);
     }
 
